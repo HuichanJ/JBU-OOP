@@ -4,4 +4,5 @@ Hours = int(input("How many hours do you work in a day? :"))
 Days = int(input("How many total days do you work? :"))
 
 Salary = Wages * Hours * Days
-print("Your total Salary is ", Salary)
+print(EmpName, "Your total Salary is ", Salary)
+
