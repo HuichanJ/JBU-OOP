@@ -1,8 +1,9 @@
 EmpName = input("Type the name of the employee: ")
-Wages = int(input("What is your input? :"))
+Wages = int(input("What is your wages? :"))
 Hours = int(input("How many hours do you work in a day? :"))
 Days = int(input("How many total days do you work? :"))
 
 Salary = Wages * Hours * Days
 print(EmpName, "Your total Salary is ", Salary)
+
 
