@@ -1,0 +1,13 @@
+Number1 = int(input("Type any number for the first number : "))
+Number2 = int(input("Type any number for the second number : "))
+Operator = input("Type any operators from  + - * /  : ")
+
+if Operator == "+":
+    print("The result is : ", Number1+Number2)
+elif Operator == "-":
+    print("The result is : ", Number1-Number2)
+elif Operator == "*":
+    print("The result is : ", Number1*Number2)
+elif Operator == "/":
+    print("The result if : ", Number1/Number2)
+
