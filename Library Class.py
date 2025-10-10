@@ -7,7 +7,7 @@ class Book:
         self.BookID = ""
         self.publisher = ""
         self.Title = ""
-        self.Author = ""
+        self.Author = {}
         self.publication = ""
 
 
@@ -15,7 +15,7 @@ class Book:
 
         self.BookID = input("Enter Book ID")
         self.Title = input("Enter Book Title")
-        self.Author = a1
+        self.Author.update(a1)
         self.publisher = input("Enter Publisher")
         self.publication = input("Enter Publication")
 
@@ -25,11 +25,7 @@ class Book:
 
 
     def display(self):
-        print("Book ID: ", self.BookID,
-              "\nBook Title: ", self.Title,
-              "\nBook Author: ", self.Author,
-              "\nPublisher :", self.publisher,
-              "\nPublication :", self.publication)
+        print(myBook[input("Enter Book ID")])
 
 class Author:
     def __init__(self):
@@ -77,8 +73,8 @@ class User:
                                     "Books Borrowed: ":self.bookBorrowed}}
 
 
-    def BorrowBooks(self, b1):
-        self.bookBorrowed.append(b1)
+    def BorrowBooks(self):
+        self.myUser[input("Enter ID")]["Books Borrowed: "].append(myBook[input("Enter Book ID")])
 
     def display(self):
         id = input("Enter User ID")
@@ -90,6 +86,10 @@ class User:
             print("Borrowed Book: ", x)
 
 #=======================================================================================================================
+Users = User()
+Authors = Author()
+Books = Book()
+
 
 while True:
     print("1. Add User\n"
@@ -99,3 +99,18 @@ while True:
           "Type any other number to Exit")
     n = int(input("Choose your option"))
     if n == 1:
+        addUser()
+
+    elif n == 2:
+        addAuthor()
+
+    elif n == 3:
+        addBook()
+
+    elif n == 4:
+        BorrowBooks()
+
+    else:
+        break
+
+
