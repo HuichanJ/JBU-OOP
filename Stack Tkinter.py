@@ -26,7 +26,7 @@ class Queue:
 
     def dequeue(self):
         try:
-            self.q.pop(0)
+            self.q.pop()
             self.answer.delete("1.0", END)
             for x in self.q:
                 self.answer.insert(tk.INSERT, x)
