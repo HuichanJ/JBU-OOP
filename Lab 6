@@ -1,0 +1,30 @@
+from numpy import median
+import pandas as pd
+df = pd.read_csv("data01.csv")
+
+print(df.median_house_value.median())
+
+
+for x in df.index:
+  if df.loc[x, "total_rooms"] < 500:
+    df.loc[x, "total_rooms"] = df.loc[x, "median_house_value"]
+
+df
+
+
+for x in df.index:
+  if df.loc[x, "housing_median_age"] > 25:
+    df.drop(x, inplace = True)
+
+df
+
+
+d1 = df['housing_median_age']
+d2 = df['total_rooms']
+
+import matplotlib.pyplot as pit
+
+d1.plot()
+pit.show()
+d2.plot()
+pit.show()
